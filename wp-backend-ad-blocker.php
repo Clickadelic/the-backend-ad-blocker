@@ -13,6 +13,19 @@ Domain Path: /languages
 */
 
 if(!defined('ABSPATH')) {
-	exit('NaNa nAnA NaNa nAnA NaNa nAnA Batman!');
+	exit('You don\'t belong here!');
 }
 
+if(!class_exists('WP_Backend_Ad_Blocker')){
+	class WP_Backend_Ad_Blocker {
+		public function __construct(){
+			add_action("admin_enqueue_style", [$this, "load_backend_style"]);
+		}
+
+		public static function load_backend_style(){
+			admin_enqueue_style("wp-backend-ad-blocker-style",  plugin_dir_url( __FILE__ ) . '/assets/css/wp-backend-ad-blocker.css', null, null, 'all');
+		}
+	}
+}
+
+$wp_backend_ad_blocker = new WP_Backend_Ad_Blocker();

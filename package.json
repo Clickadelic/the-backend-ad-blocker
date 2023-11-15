@@ -1,0 +1,25 @@
+{
+	"name": "wp-backend-ad-blocker",
+	"version": "1.0.0",
+	"description": "Blocks most of the backend-ads advertising to go pro.",
+	"main": "index.js",
+	"scripts": {
+		"backend-css": "sass ./assets/scss/wp-backend-ad-blocker.scss ./assets/css/wp-backend-ad-blocker.css --no-source-map --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Clickadelic/wp-backend-ad-blocker.git"
+	},
+	"keywords": [
+		"WordPress"
+	],
+	"author": "Tobias Hopp",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Clickadelic/wp-backend-ad-blocker/issues"
+	},
+	"homepage": "https://github.com/Clickadelic/wp-backend-ad-blocker#readme",
+	"devDependencies": {
+		"sass": "^1.69.5"
+	}
+}
