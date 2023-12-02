@@ -2,16 +2,18 @@
 
 // Updraft
 .updraft-ad-container.updated {
-  display: none;
+	display: none;
 }
 
 // WordFence
 .toplevel_page_Wordfence {
 	.wp-submenu {
+
 		// Help
 		li:nth-last-child(2) {
 			display: none;
 		}
+
 		// Go Pro
 		li:last-child {
 			display: none;
@@ -29,6 +31,14 @@
 		}
 
 		// Go Pro
+		li:last-child {
+			display: none;
+		}
+	}
+}
+
+.toplevel_page_postman {
+	.wp-submenu {
 		li:last-child {
 			display: none;
 		}
@@ -139,12 +149,14 @@ div.fs-notice.promotion,
 
 #wp-dreams {
 	.wpdreams-box {
+
 		.go-pro,
 		.why-pro,
 		.socials {
-			display: none!important;
+			display: none !important;
 		}
 	}
+
 	#subtabs {
 		li:last-child {
 			display: none;

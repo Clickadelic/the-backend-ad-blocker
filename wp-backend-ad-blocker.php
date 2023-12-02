@@ -23,7 +23,7 @@ if(!class_exists('WP_Backend_Ad_Blocker')){
 		}
 
 		public static function load_backend_style(){
-			admin_enqueue_style("wp-backend-ad-blocker-style",  plugin_dir_url( __FILE__ ) . '/assets/css/wp-backend-ad-blocker.css', null, null, 'all');
+			admin_enqueue_script("wp-backend-ad-blocker-style",  plugin_dir_url( __FILE__ ) . 'assets/css/wp-backend-ad-blocker.css', null, false, 'all');
 		}
 	}
 }

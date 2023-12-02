@@ -16,6 +16,10 @@
   display: none;
 }
 
+.toplevel_page_postman .wp-submenu li:last-child {
+  display: none;
+}
+
 .ame-is-pro-version {
   display: block;
 }
