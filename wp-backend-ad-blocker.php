@@ -12,11 +12,11 @@ Text Domain: wp-backend-ad-blocker
 Domain Path: /languages
 */
 
-if(!defined('ABSPATH')) {
-	exit('You don\'t belong here!');
+if(!defined("ABSPATH")) {
+	exit("You don\'t belong here!");
 }
 
-if(!class_exists('WP_Backend_Ad_Blocker')){
+if(!class_exists("WP_Backend_Ad_Blocker")){
 	class WP_Backend_Ad_Blocker {
 		public function __construct(){
 			add_action("init", [$this, "init_plugin_textdomain"]);
@@ -24,11 +24,11 @@ if(!class_exists('WP_Backend_Ad_Blocker')){
 		}
 
 		public static function load_backend_style(){
-			admin_enqueue_script("wp-backend-ad-blocker-style",  plugin_dir_url( __FILE__ ) . 'assets/css/wp-backend-ad-blocker.css', null, false, 'all');
+			admin_enqueue_script("wp-backend-ad-blocker-style",  plugin_dir_url( __FILE__ ) . "assets/css/wp-backend-ad-blocker.css", null, false, "all");
 		}
 
 		public static function init_plugin_textdomain(){
-			load_plugin_textdomain( 'wp-backend-ad-blocker', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+			load_plugin_textdomain("wp-backend-ad-blocker", false, dirname( plugin_basename( __FILE__ ) ) . "/languages");
 		}
 	}
 }
